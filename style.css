@@ -1,0 +1,53 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+  }
+  
+  .contribution-graph {
+    border-collapse: collapse;
+  }
+  
+  /* Style for each "day" cell */
+  .day {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  /* Define color levels */
+  .level-0 {
+    background-color: #ebedf0;
+  }
+  .level-1 {
+    background-color: #8bcce4;
+  }
+  .level-2 {
+    background-color: #6f8ec9;
+  }
+  .level-3 {
+    background-color: #23419a;
+  }
+  .level-4 {
+    background-color: #193361;
+  }
+  
+  tr {
+    transform: scaleY(-1);
+}
+
+table {
+    transform:rotate(90deg);
+
+}
+
+tbody{
+    transform: scaleY(-1);
+}
