@@ -1,53 +1,77 @@
-
-
-body {
-    font-family: Arial, sans-serif;
+/* GRAPH */
+.days-container{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(52,1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.day{
+    background-color: rgb(173, 255, 255);
+    height: 13px;
+    width: 13px;
+    border-radius: 3px;
+    grid-column: ;
+}
+.day .active{
+    background-color: rgb(74, 255, 255);
+}
+/* TASK */
+.input-container{
+    
+    padding: 10px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #ffffff;
-  }
-  
-  .contribution-graph {
-    border-collapse: collapse;
-  }
-  
-  /* Style for each "day" cell */
-  .day {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-  }
-  
-  /* Define color levels */
-  .level-0 {
-    background-color: #ebedf0;
-  }
-  .level-1 {
-    background-color: #8bcce4;
-  }
-  .level-2 {
-    background-color: #6f8ec9;
-  }
-  .level-3 {
-    background-color: #23419a;
-  }
-  .level-4 {
-    background-color: #193361;
-  }
-  
-  tr {
-    transform: scaleY(-1);
+    border-radius: 5px;
+}
+.task-container{
+    height: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+ }
+
+ul li{
+    padding: 12px 8px 12px 50px;;
 }
 
-table {
-    transform:rotate(90deg);
+li {
+    list-style: none;
+    margin: 10px;
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+ }
 
-}
+li:before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-image: url(/Images/unchecked.png);
+    left: -30px;
+ }
 
-tbody{
-    transform: scaleY(-1);
-}
+li.done{
+    text-decoration: line-through;
+ }
+
+li.done:before{
+    background-image: url(Images/checked.png);
+ }
+ ul li span{
+    position: absolute;
+    right: 0;
+ }
